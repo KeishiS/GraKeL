@@ -44,6 +44,8 @@ dataset_metadata = {
              "link": "https://www.chrsmrrs.com/graphkerneldatasets/COX2.zip"},
     "COX2_MD": {"nl": True, "el": True, "na": False, "ea": True,
                 "link": "https://www.chrsmrrs.com/graphkerneldatasets/COX2_MD.zip"},
+    "DBLP_v1": {"nl": True, "el": True, "na": False, "ea": False,
+                "link": "https://www.chrsmrrs.com/graphkerneldatasets/DBLP_v1.zip"},
     "DHFR": {"nl": True, "el": False, "na": True, "ea": False,
              "link": "https://www.chrsmrrs.com/graphkerneldatasets/DHFR.zip"},
     "DHFR_MD": {"nl": True, "el": True, "na": False, "ea": True,
@@ -133,7 +135,9 @@ dataset_metadata = {
     "Tox21_p53": {"nl": True, "el": True, "na": False, "ea": False,
                   "link": "https://www.chrsmrrs.com/graphkerneldatasets/Tox21_p53.zip"},
     "Tox21_PPAR-gamma": {"nl": True, "el": True, "na": False, "ea": False,
-                         "link": "https://www.chrsmrrs.com/graphkerneldatasets/ox21_PPAR-gamma.zip"}
+                         "link": "https://www.chrsmrrs.com/graphkerneldatasets/ox21_PPAR-gamma.zip"},
+    "github_stargazers": {"nl": False, "el": False, "na": False, "ea": False,
+                          "link": "https://www.chrsmrrs.com/graphkerneldatasets/github_stargazers.zip"}
 }
 
 symmetric_dataset = False
