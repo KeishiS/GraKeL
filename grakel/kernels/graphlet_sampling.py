@@ -280,7 +280,12 @@ class GraphletSampling(Kernel):
         self._is_transformed = True
         if self.normalize:
             X_diag, Y_diag = self.diagonal()
-            km /= np.sqrt(np.outer(Y_diag, X_diag))
+            km = np.divide(
+                km,
+                np.sqrt(np.outer(Y_diag, X_diag)),
+                where=np.outer(Y_diag, X_diag) != 0,
+                out=np.zeros((self._nx, self._nx))
+            )
         return km
 
     def fit_transform(self, X, y=None):
@@ -321,7 +326,12 @@ class GraphletSampling(Kernel):
 
         self._X_diag = np.diagonal(km)
         if self.normalize:
-            return np.divide(km, np.sqrt(np.outer(self._X_diag, self._X_diag)))
+            return np.divide(
+                km,
+                np.sqrt(np.outer(self._X_diag, self._X_diag)),
+                where=np.outer(self._X_diag, self._X_diag) != 0,
+                out=np.zeros((self._nx, self._nx))
+            )
         else:
             return km
 
